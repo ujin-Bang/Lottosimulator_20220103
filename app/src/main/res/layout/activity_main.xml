@@ -8,6 +8,11 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="당첨번호"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +20,7 @@
         android:gravity="center">
 
         <TextView
+            android:id="@+id/txtLottoNum1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="\?"
@@ -23,6 +29,8 @@
 
 
         <TextView
+            android:id="@+id/txtLottoNum2"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="\?"
@@ -30,6 +38,8 @@
             android:textSize="20sp"/>
 
         <TextView
+            android:id="@+id/txtLottoNum3"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="\?"
@@ -37,6 +47,7 @@
             android:textSize="20sp"/>
 
         <TextView
+            android:id="@+id/txtLottoNum4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="\?"
@@ -44,6 +55,7 @@
             android:textSize="20sp"/>
 
         <TextView
+            android:id="@+id/txtLottoNum5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="\?"
@@ -51,6 +63,7 @@
             android:textSize="20sp"/>
 
         <TextView
+            android:id="@+id/txtLottoNum6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="\?"
@@ -65,6 +78,8 @@
             android:textSize="20sp"/>
 
         <TextView
+            android:id="@+id/txtBonusNum"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="\?"
@@ -75,5 +90,73 @@
 
 
     </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내 입력번호"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="26"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="36"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="42"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBuyLotto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로또 한장 구매하기"/>
+
 
 </LinearLayout>
