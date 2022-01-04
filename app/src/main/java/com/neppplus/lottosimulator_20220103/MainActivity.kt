@@ -51,7 +51,6 @@ class MainActivity : AppCompatActivity() {
 //        1천원 사용으로 간주
         mUsedMoney += 1000
 
-        txtUsedMoney.text = "${NumberFormat.getInstance(Locale.KOREA).format(mUsedMoney)}원"
 
         // 내 숫자 6개가 -> 당첨번호 6개중 몇개나 맞췄는가?
 
@@ -72,26 +71,33 @@ class MainActivity : AppCompatActivity() {
         when(correctCount) {
             6 -> {
                 Log.d("등수","1등입니다")
+                mEarnedMoney += 5000000000
             }
             5 -> {
                 //보너스 번호 검사 -> 보너스 번호가 내 번호안에 있는가?
                 if(mMyLottoNumArr.contains(mBonusNum)){
                     Log.d("등수","2등")
+                    mEarnedMoney += 50000000
                 }
                 else{
                     Log.d("등수","3등")
+                    mEarnedMoney += 2000000
                 }
             }
             4 -> {
                 Log.d("등수","4등")
+                mEarnedMoney += 50000
             }
             3 -> {
                 Log.d("등수","5등")
+                mUsedMoney -= 5000
             }
             else -> {
                 Log.d("등수","꽝 다음기회에..")
             }
         }
+        txtUsedMoney.text = "${NumberFormat.getInstance(Locale.KOREA).format(mUsedMoney)}원"
+        txtEarnMoney.text = "${NumberFormat.getInstance(Locale.KOREA).format(mEarnedMoney)}원"
 
     }
 
