@@ -5,12 +5,20 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.NumberFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
 
     val mWinLottoNumArr = ArrayList<Int>()
     var mBonusNum = 0
+
+//    내가 쓴 금액? 합산 변수
+    var mUsedMoney = 0L //Long 타입( 긴 순자 표현) 명시
+//    당첨금액? 합산 변수
+    var mEarnedMoney = 0L
     lateinit var mLottoNumTxtList : ArrayList<TextView>
 
     val mMyLottoNumArr = arrayListOf(5, 17, 26, 30, 36, 42)
@@ -40,6 +48,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun checkLottoRank() {
+//        1천원 사용으로 간주
+        mUsedMoney += 1000
+
+        txtUsedMoney.text = "${NumberFormat.getInstance(Locale.KOREA).format(mUsedMoney)}원"
 
         // 내 숫자 6개가 -> 당첨번호 6개중 몇개나 맞췄는가?
 
